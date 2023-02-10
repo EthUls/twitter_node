@@ -10,4 +10,7 @@ Ceci est une copie de l'application twitter faite en NodeJS
 - Mongoose comme ORM
 
 ## Fonctionnalités
-- Crée 
+- Crée un compte utilisateur
+- Ecrire des tweets
+- Liker, partager, commenter des tweets
+- Supprimer des tweets
