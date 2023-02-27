@@ -1,5 +1,6 @@
 
 .content {
+    background-color: white;
     height: 90vh;
     @include flex($align: flex-start);
        
