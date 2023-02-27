@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,8 +39,13 @@
 .profile-container {
   width: 20%;
   background-color: #b2bec3;
-  height: 100%;
+  height: 70%;
   padding: 2.5rem;
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-radius: 10px;
 }
 @media (max-width: 480px) {
   .profile-container {
@@ -99,54 +113,6 @@
 .tweets-container .tweets-list form .form-body .form-item:last-child {
   text-align: right;
 }
-.tweets-container .tweets-list .tweet-card {
-  width: 50%;
-  border: 1px solid #333;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-radius: 5px;
-}
-@media (max-width: 480px) {
-  .tweets-container .tweets-list .tweet-card {
-    width: 100%;
-  }
-}
-.tweets-container .tweets-list .tweet-card-author {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.tweets-container .tweets-list .tweet-card-author img {
-  width: 2.5rem;
-}
-.tweets-container .tweets-list .tweet-card-author p {
-  margin-left: 1rem;
-}
-.tweets-container .tweets-list .tweet-card-body {
-  padding: 1rem;
-}
-.tweets-container .tweets-list .tweet-card-actions {
-  margin-top: 2rem;
-  border-top: 1px solid #ddd;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.tweets-container .tweets-list .tweet-card-actions i {
-  color: #00acee;
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.tweets-container .tweets-list .tweet-card-actions i:hover {
-  color: #0078a8;
-}
 
 .btn {
   padding: 10px 15px;
@@ -167,23 +133,75 @@
   background-color: #00acee;
 }
 
+.tweet-card {
+  width: 50%;
+  border: 1px solid #333;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+@media (max-width: 480px) {
+  .tweet-card {
+    width: 100%;
+  }
+}
+.tweet-card-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tweet-card-author-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tweet-card-author-data img {
+  width: 2.5rem;
+}
+.tweet-card-author-data p {
+  margin-left: 1rem;
+}
+.tweet-card-author-actions a {
+  color: #333;
+}
+.tweet-card-author-actions a i {
+  cursor: pointer;
+}
+.tweet-card-body {
+  padding: 1rem;
+}
+.tweet-card-actions {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tweet-card-actions i {
+  color: #00acee;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.tweet-card-actions i:hover {
+  color: #0078a8;
+}
+
 .content {
-  background-color: #dfe6e9;
   height: 90vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

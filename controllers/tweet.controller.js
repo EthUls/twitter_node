@@ -1,4 +1,4 @@
-const { createNewTweet, findAllTweets} = require('../queries/tweet.queries');
+const { createNewTweet, findAllTweets, findTweetAndDelete} = require('../queries/tweet.queries');
 
 exports.createTweet = async (req,res,next) => {
     try {
@@ -19,5 +19,16 @@ exports.tweetList = async (req, res, next) => {
         res.render('tweets/tweet-list', { tweets })
     } catch (error) {
         next(error)
+    }
+}
+
+exports.deleteTweet = async (req, res, next) => {
+    try {
+        const tweetId = req.params.tweetId; //recuperation de l'id
+        await findTweetAndDelete(tweetId); // Attend la suppression du tweet avec l'id defini
+        res.redirect('/'); //Redirection vers la page d'accueil
+
+    } catch (error) {
+        next(error);
     }
 }
