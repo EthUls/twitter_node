@@ -11,6 +11,13 @@ exports.findAllTweets = () => {
 }
 
 exports.findTweetAndDelete = (tweetId) => {
-
     return Tweet.findByIdAndDelete(tweetId).exec();
+}
+
+exports.findTweetById = (tweetId) => {
+    return Tweet.findById(tweetId).exec();
+}
+
+exports.findTweetAndUpdate = (tweetId, body) => {
+    return Tweet.findByIdAndUpdate(tweetId, {$set: body}).exec();
 }
