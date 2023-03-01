@@ -78,8 +78,8 @@ a {
   .profile-container .profile {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     margin-right: 1rem;
   }
@@ -93,10 +93,50 @@ a {
 }
 @media (max-width: 480px) {
   .profile-container .profile-img img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     width: 3rem;
     height: 3rem;
     margin: 0;
   }
+}
+.profile-container .profile-actions {
+  margin-top: 30px;
+}
+@media (max-width: 480px) {
+  .profile-container .profile-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+}
+.profile-container .profile-data {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .profile-container .profile-data {
+    display: hidden;
+  }
+}
+.profile-container .profile-data-posts, .profile-container .profile-data-followers, .profile-container .profile-data-following {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 10px;
 }
 
 .tweets-container {
